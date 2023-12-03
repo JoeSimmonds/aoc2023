@@ -1,6 +1,6 @@
 // For more information on writing tests, see
 // https://scalameta.org/munit/docs/getting-started.html
-class MySuite extends munit.FunSuite {
+class Day1Specs extends munit.FunSuite {
   test("Day 1 Part 1 should get the value from a single line that has no Alphas") {
     val input = "23" 
     assertEquals (Day1Part1.getPart1Sum(List(input)), 23)
