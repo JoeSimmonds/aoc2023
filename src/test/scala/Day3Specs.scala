@@ -7,7 +7,7 @@ class Day3Specs extends munit.FunSuite {
             ".........."
         ) 
 
-        assertEquals(Day3.sumOfPartNumnbers(input), 0)
+        assertEquals(new day3.Schematic(input).sumOfPartNumbers(), 0)
     }
 
     test("A number with no symbol is ignored") {
@@ -18,7 +18,7 @@ class Day3Specs extends munit.FunSuite {
             ".........."
         ) 
 
-        assertEquals(Day3.sumOfPartNumnbers(input), 0)
+        assertEquals(new day3.Schematic(input).sumOfPartNumbers(), 0)
     }
 
     test("A number with a symbol after it is a part number") {
@@ -29,7 +29,7 @@ class Day3Specs extends munit.FunSuite {
             ".........."
         ) 
 
-        assertEquals(Day3.sumOfPartNumnbers(input), 456)
+        assertEquals(new day3.Schematic(input).sumOfPartNumbers(), 456)
     }
 
      test("A number with a symbol before it is a part number") {
@@ -40,7 +40,7 @@ class Day3Specs extends munit.FunSuite {
             ".........."
         ) 
 
-        assertEquals(Day3.sumOfPartNumnbers(input), 45)
+        assertEquals(new day3.Schematic(input).sumOfPartNumbers(), 45)
     }
 
     test("A number with a symbol above it is a part number") {
@@ -51,7 +51,7 @@ class Day3Specs extends munit.FunSuite {
             ".........."
         ) 
 
-        assertEquals(Day3.sumOfPartNumnbers(input), 245)
+        assertEquals(new day3.Schematic(input).sumOfPartNumbers(), 245)
     }
 
     test("A number with a symbol above it is a part number") {
@@ -62,7 +62,7 @@ class Day3Specs extends munit.FunSuite {
             ".....&....."
         ) 
 
-        assertEquals(Day3.sumOfPartNumnbers(input), 224)
+        assertEquals(new day3.Schematic(input).sumOfPartNumbers(), 224)
     }
 
         test("A number with a symbol diagonally near is a part Number") {
@@ -73,7 +73,7 @@ class Day3Specs extends munit.FunSuite {
             ".......£..."
         ) 
 
-        assertEquals(Day3.sumOfPartNumnbers(input), 598)
+        assertEquals(new day3.Schematic(input).sumOfPartNumbers(), 598)
     }
 
 
@@ -90,7 +90,7 @@ class Day3Specs extends munit.FunSuite {
             "...$.*....",
             ".664.598.."
         )
-        assertEquals(Day3.sumOfPartNumnbers(input), 4361)
+        assertEquals(new day3.Schematic(input).sumOfPartNumbers(), 4361)
     }
 
     test("doesn't miss out numbers at the end of the line") {
@@ -100,7 +100,7 @@ class Day3Specs extends munit.FunSuite {
             ".........23",
             ".........$."
         ) 
-        assertEquals(Day3.sumOfPartNumnbers(input), 23)
+        assertEquals(new day3.Schematic(input).sumOfPartNumbers(), 23)
     }
 
     test("Gets gear ratio of provided example") {
@@ -117,6 +117,6 @@ class Day3Specs extends munit.FunSuite {
             ".664.598.."
         )
 
-        assertEquals(Day3.totalGearRatio(input), 467835)
+        assertEquals(new day3.Schematic(input).totalGearRatio(), 467835)
     }
 }

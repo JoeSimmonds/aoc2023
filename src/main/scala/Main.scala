@@ -13,8 +13,9 @@ import scala.io.Source
   println(s"Day2 Part1 : $d2p1")
   println(s"Day2 Part2 : $d2p2")
   val linesDay3 = Source.fromResource("Day3.data.txt").getLines().toList
-  val d3p1 = Day3.sumOfPartNumnbers(linesDay3)
-  val d3p2 = Day3.totalGearRatio(linesDay3)
+
+  val d3p1 = new day3.Schematic(linesDay3).sumOfPartNumbers()
+  val d3p2 = new day3.Schematic(linesDay3).totalGearRatio()
   println(s"Day3 Part1 : $d3p1")
   println(s"Day3 Part2 : $d3p2")
 
