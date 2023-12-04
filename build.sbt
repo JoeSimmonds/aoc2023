@@ -10,5 +10,4 @@ lazy val root = project
 
     libraryDependencies += "org.scalameta" %% "munit" % "0.7.29" % Test,
     libraryDependencies += "org.typelevel" %% "cats-core" % "2.10.0"
-    
   )
