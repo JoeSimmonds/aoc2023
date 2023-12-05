@@ -24,7 +24,8 @@ class Schematic(lines: List[String]) {
       lineNo: Int
   ): List[NumberPosition] = {
     line.headOption match
-      case None if currentNumber == "" => acc
+      case None if currentNumber == "" => 
+        acc
       case None =>
         acc :+ NumberPosition(
           currentNumber.toIntOption.getOrElse(0),
@@ -83,11 +84,7 @@ class Schematic(lines: List[String]) {
         )
   }
 
-  private def scanLineForSymbol(
-      line: String,
-      lineNo: Int
-  ): List[SymbolPosition] = scanLineForSymbolRec(line, lineNo, 0, Nil)
+  private def scanLineForSymbol(line: String, lineNo: Int): List[SymbolPosition] = scanLineForSymbolRec(line, lineNo, 0, Nil)
 
-  private def scanLineForNumber(line: String, lineNo: Int) =
-    scanLineForNumberRec(line, "", 0, Nil, lineNo)
+  private def scanLineForNumber(line: String, lineNo: Int) = scanLineForNumberRec(line, "", 0, Nil, lineNo)
 }

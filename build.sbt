@@ -1,5 +1,11 @@
 val scala3Version = "3.3.1"
 
+val deps: List[ModuleID] = List (
+  "org.scalameta" %% "munit" % "0.7.29" % Test,
+  "org.typelevel" %% "cats-core" % "2.10.0",
+  "org.scala-lang.modules" %% "scala-parser-combinators" % "2.3.0"
+)
+
 lazy val root = project
   .in(file("."))
   .settings(
@@ -8,6 +14,5 @@ lazy val root = project
 
     scalaVersion := scala3Version,
 
-    libraryDependencies += "org.scalameta" %% "munit" % "0.7.29" % Test,
-    libraryDependencies += "org.typelevel" %% "cats-core" % "2.10.0"
+    libraryDependencies ++= deps
   )

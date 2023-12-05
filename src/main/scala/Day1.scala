@@ -38,7 +38,7 @@ object Day1Part2 {
       .map(dStr => digitStrings.indexOf(dStr) % 9 +1)
 
   private def getNumberForLineWithStringBasedDigits(line: String): Option[Int] ={
-    (findLeftMostDigit(line), findRightMostDigit(line)) match
+    (findLeftMostDigit(line), findRightMostDigit(line)) match 
       case (None, None) => None
       case (Some(a), None) => Some(a*10 + a)
       case (None, Some(b)) => Some(b*10 + b)
