@@ -32,3 +32,9 @@ import scala.io.Source
   val d5p2 = day5.Almanac.parseV2FromString(day5Data).getClosestLocation()
   println(s"Day5 Part2 : $d5p2")
 
+  val day6Data = Source.fromResource("Day6.data.txt").getLines().mkString(sys.props("line.separator"))
+  val d6p1 = day6.RaceList.productOfWins(day6Data)
+  println(s"Day6 Part1 : $d6p1")
+  val d6p2 = day6.RaceList.winCountForSingleRace(day6Data)
+  println(s"Day6 Part2 : $d6p2")
+
