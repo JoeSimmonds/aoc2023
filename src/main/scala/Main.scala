@@ -38,3 +38,17 @@ import scala.io.Source
   val d6p2 = day6.RaceList.winCountForSingleRace(day6Data)
   println(s"Day6 Part2 : $d6p2")
 
+  val day7Data = Source.fromResource("Day7.data.txt").getLines().mkString(sys.props("line.separator"))
+  val d7p1 = day7.getTotalScoreFromAllHands(day7Data)
+  println(s"Day7 Part1 : $d7p1")
+  val d7p2 = day7.getTotalScoreFromAllHandsWithJokers(day7Data)
+  println(s"Day7 Part2 : $d7p2")
+
+  val day8Data = Source.fromResource("Day8.data.txt").getLines().mkString(sys.props("line.separator"))
+  val d8p1 = day8.countSteps(day8Data)
+  println(s"Day8 Part1 : $d8p1")
+  println("Skipping Day 8 Part 2 as the solution takes 2hrs+")
+  // val d8p2 = day8.countStepsForGhosts(day8Data)  // takes about 2 hrs to run to completion
+  // println(s"Day8 Part2 : $d8p2")
+
+
