@@ -51,4 +51,10 @@ import scala.io.Source
   // val d8p2 = day8.countStepsForGhosts(day8Data)  // takes about 2 hrs to run to completion
   // println(s"Day8 Part2 : $d8p2")
 
+  val day9Data = Source.fromResource("Day9.data.txt").getLines().mkString(sys.props("line.separator"))
+  val d9p1 = day9.sumOfNextValues(day9Data)
+  println(s"Day9 Part1 : $d9p1")
+  val d9p2 = day9.sumOfPreviousValues(day9Data)
+  println(s"Day9 Part2 : $d9p2")
+
 
