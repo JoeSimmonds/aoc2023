@@ -57,4 +57,11 @@ import scala.io.Source
   val d9p2 = day9.sumOfPreviousValues(day9Data)
   println(s"Day9 Part2 : $d9p2")
 
+  val day10Data = Source.fromResource("Day10.data.txt").getLines().toList
+  val pipeMap = day10.PipeMap(day10Data)
+  val d10p1 = pipeMap.furthestDistanceInLoop()
+  println(s"Day10 Part1 : $d10p1")
+  val d10p2 = pipeMap.tilesInside()
+  println(s"Day10 Part2 : $d10p2")
+
 
