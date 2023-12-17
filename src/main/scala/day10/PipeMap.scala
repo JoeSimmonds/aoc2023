@@ -1,11 +1,12 @@
 package day10
 
 import scala.annotation.tailrec
-import day10.Vector2.unitFromDirectionChar
+import utils.Vector2
 import cats.data._
 import cats.syntax.all._
 import cats._
 import org.w3c.dom.css.Counter
+import utils.Vector2
 
 case class PipeMap(input: List[String]) {
     def at(pos: Vector2): Tile = (for {

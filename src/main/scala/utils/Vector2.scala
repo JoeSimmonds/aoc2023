@@ -1,14 +1,14 @@
-package day10
+package utils
 
 import scala.annotation.tailrec
-import day10.Vector2.unitFromDirectionChar
 import cats.data.State
 
 case class Vector2(x: Int, y: Int) {
     def + (that: Vector2): Vector2 = Vector2(this.x + that.x, this.y + that.y)
     def - (that: Vector2): Vector2 = Vector2(this.x - that.x, this.y - that.y)
-    def move1(dir: Char): Vector2 = this + unitFromDirectionChar(dir)
+    def move1(dir: Char): Vector2 = this + Vector2.unitFromDirectionChar(dir)
     def asTuple: (Int, Int) = (this.x, this.y)
+    def rectangularDistance = Math.abs(x) + Math.abs(y)
 }
 
 object Vector2 {

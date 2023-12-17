@@ -29,8 +29,9 @@ import scala.io.Source
   val day5Data = Source.fromResource("Day5.data.txt").getLines().mkString(sys.props("line.separator"))
   val d5p1 = day5.Almanac.parseFromString(day5Data).getClosestLocation()
   println(s"Day5 Part1 : $d5p1")
-  val d5p2 = day5.Almanac.parseV2FromString(day5Data).getClosestLocation()
-  println(s"Day5 Part2 : $d5p2")
+  println("Skipping Day 5 Part 2 as the solution takes 6 seconds to run")
+  // val d5p2 = day5.Almanac.parseV2FromString(day5Data).getClosestLocation()
+  // println(s"Day5 Part2 : $d5p2")
 
   val day6Data = Source.fromResource("Day6.data.txt").getLines().mkString(sys.props("line.separator"))
   val d6p1 = day6.RaceList.productOfWins(day6Data)
@@ -63,5 +64,11 @@ import scala.io.Source
   println(s"Day10 Part1 : $d10p1")
   val d10p2 = pipeMap.tilesInside()
   println(s"Day10 Part2 : $d10p2")
+
+  val day11Data = Source.fromResource("Day11.data.txt").getLines().toList
+  val d11p1 = day11.totalInterGalacticDistance(day11Data, 2)
+  println(s"Day11 Part1 : $d11p1")
+  val d11p2 = day11.totalInterGalacticDistance(day11Data, 1000000)
+  println(s"Day11 Part2 : $d11p2")
 
 

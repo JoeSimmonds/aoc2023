@@ -1,7 +1,7 @@
 package day10
 
 import scala.annotation.tailrec
-import day10.Vector2.unitFromDirectionChar
+import utils.Vector2
 import cats.data.State
 
 trait Tile {
